@@ -137,6 +137,7 @@
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
     <Compile Include="ChatSystem.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="helper.cs" />
     <Compile Include="ip.cs" />
     <Compile Include="login.cs">

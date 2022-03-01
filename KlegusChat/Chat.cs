@@ -38,12 +38,16 @@ namespace KlegusChat
 
         private void Chat_Load(object sender, EventArgs e)
         {
+            string[] users = Helper.GetUserCut($"SHOW TABLES like '{login.username}%'", login.username);
+            //MessageBox.Show(users.Length.ToString());
             MSG.FlowDirection = FlowDirection.TopDown;
             MSG.AutoScroll = true;
             this.ChatTOP.Text = "Logged as " + login.username;
             ArrayList names = new ArrayList();
-            names.Add("klegus");
-            names.Add("klegus2");
+            for(int p = 0; p < users.Length; p++)
+            {
+                names.Add(users[p].ToString());
+            }
             int i = 0;
             foreach (string n in names)
             {
@@ -96,6 +100,11 @@ namespace KlegusChat
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

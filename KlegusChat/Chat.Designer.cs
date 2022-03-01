@@ -35,9 +35,9 @@
             this.ChatTOP = new Bunifu.UI.WinForms.BunifuLabel();
             this.MSG = new System.Windows.Forms.FlowLayoutPanel();
             this.UserStatus = new System.Windows.Forms.Panel();
-            this.statusDB = new System.Windows.Forms.Label();
-            this.user = new System.Windows.Forms.Label();
             this.statusUser = new System.Windows.Forms.Label();
+            this.user = new System.Windows.Forms.Label();
+            this.statusDB = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +84,7 @@
             // 
             this.ChatTOP.AllowParentOverrides = false;
             this.ChatTOP.AutoEllipsis = false;
+            this.ChatTOP.Cursor = System.Windows.Forms.Cursors.Default;
             this.ChatTOP.CursorType = System.Windows.Forms.Cursors.Default;
             this.ChatTOP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ChatTOP.ForeColor = System.Drawing.Color.White;
@@ -115,17 +116,16 @@
             this.UserStatus.Size = new System.Drawing.Size(600, 27);
             this.UserStatus.TabIndex = 0;
             // 
-            // statusDB
+            // statusUser
             // 
-            this.statusDB.AutoSize = true;
-            this.statusDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.statusDB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.statusDB.ForeColor = System.Drawing.Color.Lime;
-            this.statusDB.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.statusDB.Location = new System.Drawing.Point(683, 6);
-            this.statusDB.Name = "statusDB";
-            this.statusDB.Size = new System.Drawing.Size(0, 15);
-            this.statusDB.TabIndex = 6;
+            this.statusUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.statusUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.statusUser.ForeColor = System.Drawing.Color.White;
+            this.statusUser.Location = new System.Drawing.Point(100, 0);
+            this.statusUser.Margin = new System.Windows.Forms.Padding(0);
+            this.statusUser.Name = "statusUser";
+            this.statusUser.Size = new System.Drawing.Size(100, 27);
+            this.statusUser.TabIndex = 1;
             // 
             // user
             // 
@@ -139,16 +139,17 @@
             this.user.TabIndex = 0;
             this.user.Click += new System.EventHandler(this.label1_Click);
             // 
-            // statusUser
+            // statusDB
             // 
-            this.statusUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.statusUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.statusUser.ForeColor = System.Drawing.Color.White;
-            this.statusUser.Location = new System.Drawing.Point(100, 0);
-            this.statusUser.Margin = new System.Windows.Forms.Padding(0);
-            this.statusUser.Name = "statusUser";
-            this.statusUser.Size = new System.Drawing.Size(100, 27);
-            this.statusUser.TabIndex = 1;
+            this.statusDB.AutoSize = true;
+            this.statusDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statusDB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.statusDB.ForeColor = System.Drawing.Color.Lime;
+            this.statusDB.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.statusDB.Location = new System.Drawing.Point(683, 6);
+            this.statusDB.Name = "statusDB";
+            this.statusDB.Size = new System.Drawing.Size(0, 15);
+            this.statusDB.TabIndex = 6;
             // 
             // panel1
             // 

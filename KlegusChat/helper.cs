@@ -64,6 +64,34 @@ namespace KlegusChat
 
 
         }
+        public static string[] GetUserCut(string q, string u)
+        {
+            List<string> list = new List<string>();
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["conn"];
+            string conn = settings.ConnectionString;
+
+            MySqlConnection con = new MySqlConnection(conn);
+            MySqlCommand cmd = new MySqlCommand(q, con);
+            con.Open();
+            MySqlDataReader myReader = cmd.ExecuteReader();
+            try
+            {
+                while (myReader.Read())
+                {
+                    char Lchar = u.Last();
+                    int Index = myReader.GetString(0).IndexOf(Lchar) + 2;
+                    int l = myReader.GetString(0).Length;
+                    string c = myReader.GetString(0).Substring(Index);
+                    list.Add(c);
+                }
+            }
+            finally
+            {
+                myReader.Close();
+                con.Close();
+            }
+            return list.ToArray();
+        }
         public static bool mysql_insert(string q)
         {
 
